@@ -10,4 +10,4 @@ const testing = {
   },
 };
 
-module.exports = testing;
+module.exports = testing.find;
