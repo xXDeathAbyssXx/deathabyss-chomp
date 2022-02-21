@@ -1,5 +1,5 @@
-module.exports = function () {
-  function find(string) {
+module.exports = {
+  find: function (string) {
     let test = undefined;
     if (isNaN(string)) {
       if (string.substring) {
@@ -7,9 +7,5 @@ module.exports = function () {
       }
       return test;
     }
-  }
-
-  return {
-    find: find,
-  };
+  },
 };
