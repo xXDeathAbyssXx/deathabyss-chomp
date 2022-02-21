@@ -10,4 +10,6 @@ const testing = {
   },
 };
 
-module.exports = testing.find;
+module.exports = {
+  find: testing.find,
+};
