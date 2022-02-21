@@ -1,5 +1,5 @@
 module.exports = function () {
-  function find() {
+  function find(string) {
     let test = undefined;
     if (isNaN(string)) {
       if (string.substring) {
