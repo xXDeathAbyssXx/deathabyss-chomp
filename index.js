@@ -1,5 +1,5 @@
-const testing = {
-  find: function (string) {
+module.exports = function () {
+  function find() {
     let test = undefined;
     if (isNaN(string)) {
       if (string.substring) {
@@ -7,9 +7,9 @@ const testing = {
       }
       return test;
     }
-  },
-};
+  }
 
-module.exports = {
-  find: testing.find,
+  return {
+    find: find,
+  };
 };
