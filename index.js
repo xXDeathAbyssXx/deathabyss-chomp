@@ -29,10 +29,10 @@ exports.count = function (str) {
           let i = 0;
           let n = 0;
           while (i < gz) {
-            i++;
             if (str[i].match(cookieRegex)) {
               n = n + 1;
             }
+            i++;
           }
           yc = n;
         } else {
