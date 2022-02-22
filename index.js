@@ -32,8 +32,8 @@ exports.count = function (str) {
             s = str.split("");
             c = [];
             c[0] = s[i] + s[1];
-            let hex = c[0].codePointAt(0).toString(16);
-            if (hex === "1f36a") {
+            let ib = c[0].codePointAt(0).toString(16);
+            if (ib === "1f36a" || ib === "d83c") {
               n = n + 1;
             }
             i++;
