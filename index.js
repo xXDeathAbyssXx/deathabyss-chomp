@@ -104,3 +104,45 @@ exports.give = function (from, to, number) {
   }
   return oa;
 };
+exports.stats = function (str) {
+  const emojiRegex = /\p{Emoji}/u;
+  let us = undefined;
+  if (str) {
+    if (isNaN(str)) {
+      if (str.substring) {
+        if (str.match(emojiRegex)) {
+          let cs = "🍪";
+          if (str.includes(cs)) {
+            function rx(brands) {
+              return brands[Math.floor(Math.random() * brands.length)];
+            }
+            let brands = [
+              "Gullón",
+              "Reglero",
+              "Fontaneda",
+              "Chips",
+              "Cuétara",
+              "Oreo",
+              "Daelmans",
+              "Macarons de Pauline",
+              "Royal Dansk",
+            ];
+            let sizes = ["small", "medium", "big"];
+            let states = ["complete", "broken"];
+            let type = rx(brands);
+            let size = rx(sizes);
+            let state = rx(states);
+            let ch = Math.floor(Math.random() * 100) + 1;
+            if (ch < 5) {
+              size = "Legendary";
+            }
+            us = `The ${type} cookie is ${size} and ${state}.`;
+          } else {
+            us = false;
+          }
+        }
+      }
+    }
+  }
+  return us;
+};
