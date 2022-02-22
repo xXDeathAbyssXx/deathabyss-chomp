@@ -75,7 +75,7 @@ exports.generate = function (number) {
 
 exports.give = function (from, to, number) {
   const emojiRegex = /\p{Emoji}/u;
-  let fg = undefined;
+  let oa = undefined;
   if (number) {
     if (!isNaN(number)) {
       if (!number.substring) {
@@ -89,9 +89,9 @@ exports.give = function (from, to, number) {
                 if (isNaN(to)) {
                   if (to.substring) {
                     if (number < 2) {
-                      fg = `${from} gave ${number} cookie to ${to}`;
+                      oa = `${from} gave ${number} cookie to ${to}`;
                     } else if (number > 1) {
-                      fg = `${from} gave ${number} cookies to ${to}`;
+                      oa = `${from} gave ${number} cookies to ${to}`;
                     }
                   }
                 }
@@ -102,5 +102,5 @@ exports.give = function (from, to, number) {
       }
     }
   }
-  return fg;
+  return oa;
 };
