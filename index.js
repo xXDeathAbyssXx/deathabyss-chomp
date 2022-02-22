@@ -1,11 +1,9 @@
-module.exports = {
-  find: function (string) {
-    let test = undefined;
-    if (isNaN(string)) {
-      if (string.substring) {
-        test = true;
-      }
-      return test;
+exports.find = function (string) {
+  let test = undefined;
+  if (isNaN(string)) {
+    if (string.substring) {
+      test = true;
     }
-  },
+    return test;
+  }
 };
