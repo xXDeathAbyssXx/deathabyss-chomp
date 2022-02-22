@@ -72,3 +72,35 @@ exports.generate = function (number) {
   }
   return za;
 };
+
+exports.give = function (from, to, number) {
+  const emojiRegex = /\p{Emoji}/u;
+  let fg = undefined;
+  if (number) {
+    if (!isNaN(number)) {
+      if (!number.substring) {
+        if (number > 1000) {
+          throw new RangeError("You cannot give more than 1000 cookies");
+        }
+        if (from) {
+          if (isNaN(from)) {
+            if (from.substring) {
+              if (to) {
+                if (isNaN(to)) {
+                  if (to.substring) {
+                    if (number < 2) {
+                      fg = `${from} gave ${number} cookie to ${to}`;
+                    } else if (number > 1) {
+                      fg = `${from} gave ${number} cookies to ${to}`;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return fg;
+};
