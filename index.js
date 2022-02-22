@@ -51,3 +51,24 @@ exports.count = function (str) {
   }
   return yc;
 };
+
+exports.generate = function (number) {
+  let za = undefined;
+  if (number) {
+    if (!isNaN(number)) {
+      if (!number.substring) {
+        if (number > 1000) {
+          throw new RangeError("You cannot generate more than 1000 cookies");
+        }
+        let a = [];
+        let i = 0;
+        while (i < number) {
+          let c = a.push(`🍪`);
+          i++;
+        }
+        za = a;
+      }
+    }
+  }
+  return za;
+};
