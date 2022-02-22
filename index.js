@@ -1,14 +1,16 @@
 exports.find = function (str) {
   const emojiRegex = /\p{Emoji}/u;
   let fg = undefined;
-  if (isNaN(str)) {
-    if (str.substring) {
-      if (str.match(emojiRegex)) {
-        let cs = "🍪";
-        if (str.includes(cs)) {
-          fg = true;
-        } else {
-          fg = false;
+  if (str) {
+    if (isNaN(str)) {
+      if (str.substring) {
+        if (str.match(emojiRegex)) {
+          let cs = "🍪";
+          if (str.includes(cs)) {
+            fg = true;
+          } else {
+            fg = false;
+          }
         }
       }
     }
