@@ -136,7 +136,7 @@ exports.stats = function (str) {
             if (ch < 5) {
               size = "Legendary";
             }
-            us = `The ${type} cookie is ${size} and ${state}.`;
+            us = `The ${type} cookie is ${size} and is ${state}.`;
           } else {
             us = false;
           }
@@ -145,4 +145,29 @@ exports.stats = function (str) {
     }
   }
   return us;
+};
+exports.funfact = function () {
+  function go(facts) {
+    return facts[Math.floor(Math.random() * facts.length)];
+  }
+  let facts = [
+    "The cookies that the Cookie Monster enjoys on Sesame Street are actually painted rice cakes.",
+    "Chocolate chip cookies were invented in the 1930s by Ruth Wakefield, who ran the Toll House Inn with her husband.",
+    "On that note: Have you noticed chocolate chips never melt? That's because they have less cocoa butter than chocolate bars.",
+    'Nabisco "uncaged" the animals on its Animal Crackers box cover after receiving criticism from PETA.',
+    "The world's biggest chocolate chip cookie weighed over 40,000 pounds.",
+    'The word "cookie" comes from the Dutch "koekje", meaning little cake.',
+    "Fortune cookies are not served in China. They are mostly an American phenomenon.",
+    "As of 2017, Oreos are America's top-selling cookie brand.",
+    "In 2002, Bruce Willis bought 12,000 Girl Scout cookies from his daughter and shipped them troops stationed in the Middle East.",
+    "Girl Scout cookies used to cost just 25 to 35 cents per dozen",
+    "Oreos are knock-offs of Hydrox biscuits, which predate Oreos by four years.",
+    'English women used to eat gingerbread "husbands" to improve their chances of finding a real mate.',
+    "The ancestors of what we now call cookies seem to have originated in the 7th century CE in Persia, one of the first places to grow sugarcane.",
+    "Famous Amos cookies were born when the founder Wally Amos, an agent, began using them to recruit celebrities to his agency.",
+    "Former Secretary of State John Kerry helped open a cookie shop in 1976, when he was bored with the predictable and boring nature of his legal profession.",
+  ];
+  let funfacts = go(facts);
+  let zp = `${funfacts}`;
+  return zp;
 };
