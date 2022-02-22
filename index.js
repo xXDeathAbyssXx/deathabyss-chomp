@@ -136,7 +136,13 @@ exports.stats = function (str) {
             if (ch < 5) {
               size = "Legendary";
             }
-            us = `The ${type} cookie is ${size} and is ${state}.`;
+            us = [
+              {
+                type: type,
+                size: size,
+                state: state,
+              },
+            ];
           } else {
             us = false;
           }
