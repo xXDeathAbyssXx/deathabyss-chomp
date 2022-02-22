@@ -20,7 +20,6 @@ exports.find = function (str) {
 
 exports.count = function (str) {
   const emojiRegex = /\p{Emoji}/u;
-  let cookieRegex = /🍪/g;
   let yc = undefined;
   if (str) {
     if (isNaN(str)) {
