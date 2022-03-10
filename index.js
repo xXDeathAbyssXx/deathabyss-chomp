@@ -1,6 +1,6 @@
 exports.find = function (str) {
   const emojiRegex = /\p{Emoji}/u;
-  let fg = undefined;
+  let fg = null;
   if (str) {
     if (isNaN(str)) {
       if (str.substring) {
@@ -20,7 +20,7 @@ exports.find = function (str) {
 
 exports.count = function (str) {
   const emojiRegex = /\p{Emoji}/u;
-  let yc = undefined;
+  let yc = null;
   if (str) {
     if (isNaN(str)) {
       if (str.substring) {
@@ -52,7 +52,7 @@ exports.count = function (str) {
 };
 
 exports.generate = function (number) {
-  let za = undefined;
+  let za = null;
   if (number) {
     if (!isNaN(number)) {
       if (!number.substring) {
@@ -74,7 +74,7 @@ exports.generate = function (number) {
 
 exports.give = function (from, to, number) {
   const emojiRegex = /\p{Emoji}/u;
-  let oa = undefined;
+  let oa = null;
   if (number) {
     if (!isNaN(number)) {
       if (!number.substring) {
@@ -105,7 +105,7 @@ exports.give = function (from, to, number) {
 };
 exports.stats = function (str) {
   const emojiRegex = /\p{Emoji}/u;
-  let us = undefined;
+  let us = null;
   if (str) {
     if (isNaN(str)) {
       if (str.substring) {
